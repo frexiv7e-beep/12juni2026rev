@@ -341,15 +341,12 @@ if "Dashboard 1" in dashboard:
         <b>SEDANG</b>, namun <b>{pct_unhealthy:.1f}%</b> hari tercatat dalam kategori Tidak Sehat atau lebih buruk —
         setara dengan ±{int(pct_unhealthy/100 * total_days):,} hari dari {total_days:,} observasi.
         Hanya <b>{pct_good:.1f}%</b> hari yang memiliki kualitas BAIK.<br><br>
-
         <b>Pencemar Utama:</b> <b>{dominant_poll}</b> mendominasi sebagai pencemar kritis, yang erat kaitannya
         dengan emisi kendaraan bermotor dan aktivitas industri di Jakarta.<br><br>
-
         <b>Weekday vs Weekend:</b> Perbedaan ISPU antara hari kerja ({d1[d1['day_type']=='Weekday']['max'].mean():.1f})
         dan akhir pekan ({d1[d1['day_type']=='Weekend']['max'].mean():.1f}) relatif kecil, mengindikasikan bahwa
         sumber pencemar bukan hanya berasal dari aktivitas kerja/bisnis, tetapi juga transportasi dan industri
         yang beroperasi sepanjang minggu.<br><br>
-
         <b>Implikasi Kebijakan:</b> Fokus pengendalian emisi perlu diarahkan pada sumber <b>{dominant_poll}</b>
         — terutama pembatasan kendaraan berbahan bakar kotor dan peningkatan standar emisi industri.
         Stasiun <b>DKI4 Lubang Buaya</b> dan <b>DKI2 Kelapa Gading</b> memerlukan perhatian prioritas.
@@ -549,15 +546,12 @@ elif "Dashboard 2" in dashboard:
         <b>Tren Jangka Panjang (2010–2023):</b> Kualitas udara Jakarta menunjukkan pola <b>fluktuatif</b>
         tanpa tren penurunan yang konsisten. Tahun <b>{yr_max}</b> mencatat rata-rata ISPU tertinggi
         ({yr_max_v:.1f}), sedangkan <b>{yr_min}</b> menjadi tahun terbersih ({yr_min_v:.1f}).<br><br>
-
         <b>Periode Kritis:</b> Tahun 2011–2013 dan 2018–2019 merupakan dua episode memburuknya kualitas udara
         secara signifikan — keduanya melampaui ambang batas ISPU 100 (Tidak Sehat). Perlu investigasi lebih lanjut
         terhadap faktor penyebab seperti kebakaran hutan, emisi industri, atau kondisi meteorologi.<br><br>
-
         <b>Dampak COVID-19 (2020):</b> Terlihat penurunan rata-rata ISPU pada tahun 2020,
         yang diduga berkaitan dengan berkurangnya aktivitas transportasi dan industri selama pandemi.
         Ini menegaskan bahwa emisi kendaraan merupakan kontributor polusi utama Jakarta.<br><br>
-
         <b>Rekomendasi:</b> Diperlukan kebijakan yang konsisten dan berkelanjutan — bukan hanya reaktif —
         untuk memastikan kualitas udara tidak kembali memburuk setelah normalisasi aktivitas ekonomi.
         """,
@@ -728,15 +722,12 @@ elif "Dashboard 3" in dashboard:
         persentase hari Tidak Sehat tertinggi ({worst_pct:.1f}%). Kawasan ini memiliki kepadatan lalu
         lintas tinggi dan berada dekat zona industri, sehingga terpapar emisi kendaraan dan aktivitas industri
         secara bersamaan.<br><br>
-
         <b>Stasiun Terbersih:</b> <b>{best_st}</b> secara konsisten menunjukkan kualitas udara terbaik.
         Lokasinya yang relatif lebih dekat dengan area hijau dan karakteristik tata kota yang berbeda
         kemungkinan berkontribusi pada kualitas udara yang lebih baik.<br><br>
-
         <b>Profil Polutan:</b> Masing-masing stasiun memiliki profil polutan yang berbeda — DKI1 Bunderan HI
         dan DKI4 Lubang Buaya lebih didominasi PM10/PM2.5 (partikel dari kendaraan & konstruksi),
         sedangkan DKI2, DKI3, DKI5 lebih didominasi O3 (ozon troposfer dari reaksi fotokimia).<br><br>
-
         <b>Implikasi Kebijakan:</b> Intervensi harus bersifat <i>site-specific</i>:
         stasiun berbasis PM perlu pembatasan kendaraan berbahan bakar diesel &amp; laju konstruksi;
         stasiun berbasis O3 memerlukan pengendalian VOC dan NOx dari kendaraan serta industri.
@@ -929,16 +920,13 @@ elif "Dashboard 4" in dashboard:
         <b>Polutan Paling Dominan:</b> <b>{top_poll}</b> mendominasi sebagai pencemar kritis
         ({top_poll_pct:.1f}% dari total kejadian). Ozon (O3) terbentuk dari reaksi fotokimia antara
         NOx dan VOC di bawah sinar ultraviolet, sehingga lebih tinggi saat musim kemarau (terik matahari).<br><br>
-
         <b>Partikulat (PM10 &amp; PM2.5):</b> Gabungan kejadian PM10 + PM2.5 menyumbang kontribusi signifikan
         kedua, terutama di stasiun DKI1 dan DKI4. Sumber utama adalah emisi kendaraan berbahan bakar
         diesel, debu konstruksi, dan pembakaran sampah terbuka.<br><br>
-
         <b>Perbedaan antar Stasiun:</b>
         DKI3 (Jagakarsa) dan DKI2 (Kelapa Gading) lebih sering mengalami O3 tinggi — indikasi kawasan
         dengan paparan matahari kuat dan akumulasi NOx dari lalu lintas. DKI4 (Lubang Buaya)
         lebih banyak terpapar partikulat, terkait kepadatan kendaraan berat di wilayah timur Jakarta.<br><br>
-
         <b>Implikasi Pengurangan Emisi:</b>
         <br>• Program <i>low-emission zone</i> di koridor bisnis untuk mengurangi NOx (prekursor O3)
         <br>• Percepatan elektrifikasi kendaraan untuk mengurangi PM &amp; NOx secara bersamaan
@@ -1137,17 +1125,14 @@ elif "Dashboard 5" in dashboard:
         dengan kualitas udara terburuk (rata-rata ISPU: {worst_month['avg_ispu']:.1f}).
         Bulan September berada di puncak musim kemarau panjang Jakarta, dengan curah hujan sangat rendah
         sehingga tidak ada efek <i>wet deposition</i> yang membersihkan polutan dari udara.<br><br>
-
         <b>Bulan Terbaik:</b> <b>{best_month['month_name']}</b> mencatat kualitas udara terbaik
         (rata-rata ISPU: {best_month['avg_ispu']:.1f}) — bersamaan dengan puncak musim hujan
         yang efektif mencuci polutan dari atmosfer.<br><br>
-
         <b>Pola Musim Hujan vs Kemarau:</b><br>
         • Musim Kemarau (Mei–Oktober): rata-rata ISPU <b>{kemarau_avg:.1f}</b> — lebih tinggi karena
         angin dari Australia membawa udara kering, sinar UV kuat (pembentukan O3), dan tidak ada hujan pembersih.<br>
         • Musim Hujan (Nov–April): rata-rata ISPU <b>{hujan_avg:.1f}</b> — lebih rendah karena
         curah hujan tinggi membantu deposisi basah partikulat dan polutan lainnya.<br><br>
-
         <b>Rekomendasi Operasional:</b><br>
         ✅ Tingkatkan <i>inspeksi emisi kendaraan</i> intensif mulai Maret–April sebelum kemarau<br>
         ✅ Aktifkan <i>sistem peringatan dini kualitas udara</i> publik selama Agustus–Oktober<br>
