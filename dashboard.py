@@ -600,7 +600,7 @@ elif "Dashboard 3" in dashboard:
                 "#E67E22" if row["pct_unhealthy"] > 10 else "#2ECC71"
             )
             st.markdown(metric_card(
-                row["stasiun"].replace(" ", "\n"),
+                row["stasiun"].replace(" ", ""),
                 f"{row['avg_ispu']:.1f}",
                 delta=None, color=color,
             ), unsafe_allow_html=True)
